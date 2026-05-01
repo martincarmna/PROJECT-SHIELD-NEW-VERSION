@@ -56,9 +56,10 @@ span{
 }
 .card p{
     text-align: center;
+    
 }
 .card img:hover{
- box-shadow: 0 20px 60px  rgba(3, 230, 11, 0.2);     
+ box-shadow: 0 20px 60px  rgba(3, 230, 11);     
 }
 .lista ul li{
     margin: 20px;
@@ -102,7 +103,7 @@ span{
     transition: all 0.3s ease;
 }
 .grid :hover{
-    box-shadow: 0 10px 60px  rgba(3, 230, 11, 0.2);
+    box-shadow: 0 10px 60px  rgb(92, 189, 96);
     transform: translateY(-8px);
 }
 .grid img{
@@ -131,4 +132,17 @@ footer {
 .Desarrollo{
     display: flex;
     justify-content: center;
+}
+.podria-interesarte li{
+
+    transition: all 0.5s ease;
+}
+.podria-interesarte li:hover{
+    box-shadow: 0 10px 25px greenyellow;
+    transform: translateY(-8px);
+    color: rgba(3, 230, 9);
+}
+.podria-interesarte ul{
+        gap: 20px;
+    text-align: center;
 }
