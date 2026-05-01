@@ -27,6 +27,7 @@ span{
             translate: 500px;
             padding: 1px;
             margin: auto;
+            scroll-behavior: smooth;
         }
 
         .logo {
@@ -51,6 +52,20 @@ span{
     border-radius: 8px;
     display: block;
     margin: 0 auto;
+  
+}
+.card p{
+    text-align: center;
+}
+.card img:hover{
+ box-shadow: 0 20px 60px  rgba(3, 230, 11, 0.2);     
+}
+.lista ul li{
+    margin: 20px;
+}
+.lista ul li:hover{
+    
+    transform: translateY(-8px);
 }
 
 .lista ul {
@@ -59,6 +74,7 @@ span{
     flex-wrap: wrap;
     gap: 20px;
     padding: 0;
+    transform: all 0.3s ease;
 }
         section{ 
             color: azure;
@@ -83,6 +99,11 @@ span{
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     translate: 10%;
+    transition: all 0.3s ease;
+}
+.grid :hover{
+    box-shadow: 0 10px 60px  rgba(3, 230, 11, 0.2);
+    transform: translateY(-8px);
 }
 .grid img{
     width: 100px;

@@ -16,13 +16,15 @@
             <!--<h2 style="color: greenyellow">PROJECT SHIELD</h2>-->
         </div>
         <nav>
-            <a class="a" href="#">HOME</a>
-            <a class="a" href="#">ABOUT</a>
-            <a class="a" href="#">DOWNLOAD</a>
+            <ul style="gap: 20px;">
+                <li> <a class="a" href="#inicio">HOME</a></li>
+                <li>  <a class="a" href="#about">ABOUT</a></li>
+                <li>    <a class="a" href="#download">DOWNLOAD</a></li>
+            </ul>
         </nav>
 
     </header>
-    <div class="promos">
+    <div id="inicio" class="promos">
         <img src="./img/gsgs.png" alt="arbol">
 
     </div>
@@ -33,7 +35,7 @@
             <ul>
                 <li>
                     <div class="card">
-                        <img onclick="alert('Estas es una perra Itzel vete a la verga')" src="./img/naof.png" alt="lo">
+                        <img onclick="alert('Herrero: Bien hecho heroe ser curioso te ayudara en esta aventura.')" src="./img/naof.png" alt="lo">
                         <p>Naofumi Iwatani</p>
                     </div>
                 </li>
@@ -81,7 +83,7 @@
          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 <br>
-    <section class="Desarrollo">
+    <section  id="about" class="Desarrollo">
         <title>Desarrollo de PROJECT SHIELD</title>
         <div class="titulo-dev">
    <h1>Desarrollo </h1>
@@ -149,18 +151,18 @@
 <br>
 
 
-    <section id="Descarga  class="descargar2 style="display: flex;"> 
+    <section id="download" class="descargar2 style="display: flex;"> 
         <img src="/img/game.png" alt="game" width="80%">
-        <h4 style="translate: -50%;">Descarga la DEMO</h4>
-        <button style="height: 20px; margin-top: auto;">Proximamente</button>
+        <!--<h1 style="translate: -100vh; ">Descarga la DEMO</h1>-->
+        <button  onclick="alert('Herrero: Todo a su momento')";  style=" padding-bottom: 5%;  height: 20px; margin-top: auto; background-color: rgb(92, 189, 96); translate: -100vh;"><b>Proximamente</b></button>
     </section>
 
-    <footer style="display: flex; gap: 15px; align-items: center;">
-        <div class="logo">
-          <img src="./akakka.png" alt="">
-           
+    <footer style="display: flex; gap: 9%; align-items: center; ">
+          <div class="logo">
+            <img src="./img/akakka.png" alt="">
+            <!--<h2 style="color: greenyellow">PROJECT SHIELD</h2>-->
         </div>
-        <div style="display: flex;  translate: 50%;">
+        <!--<div style="display: flex;  translate: 50%;">
             <ul style="gap: 20px;">
                 <li>
                     <h4>Terminos</h4>
@@ -180,6 +182,21 @@
                 </li>
             </ul>
 
+        </div>-->
+        <div class="text-footer">
+            <p style="color: greenyellow;">Desarrollado por Marty Carps ©️ Todos los derechos reservados</p>
+            <p style="color: rgb(92, 189, 96);">Versión 1.1</p>
+        </div>
+        <div class="redes-so" style="display: flex; margin-top:-1.5%;">
+            <p style="color: greenyellow;">Sigueme en mis redes sociales</p>
+            <div class="sociales" style="margin-top: 10%; grid-column: auto; ">
+                <ul style="grid-column: inherit; list-style: disc; gap: 10%; translate: -37vh;">
+                <li style="hover:blue;">Facebook</li>
+                <li style="hover: rgb(253, 3, 78);">Instagram</li>
+                <li style="hover: red;">YouTube</li>
+                <li>Tiktok</li>
+                </ul>
+            </div>
         </div>
     </footer>
 
