@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
      <link rel="icon" type="image/svg+xml" href="./img/akakka.png" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>SHIELD PROJECT</title>
@@ -77,12 +78,13 @@
     </section>
     <br>
         <section>
+            <div class="video-container">
         <h3 style="color: greenyellow; ">Mira mi video más reciente del canal</h3>
         <iframe width="560" 
         height="315" src="https://www.youtube.com/embed/kg8z0_GQ6kk?si=tLn8MPQ6trOi341L"
          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
          clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
     </section>
 <br>
     <section  id="about" class="Desarrollo">
@@ -153,26 +155,29 @@
 <br>
 
 <section class="podria-interesarte">
-    <h1>Podria interesarte mis otros proyectos</h1>
+    <h1>Podría interesarte mis otros proyectos</h1>
     <div class="tarjeta">
-<ul>
-    <li>
-
-        <p>Mi Canal para aprender guitarra</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FxuhvnPXbGM?si=tVJtBVYKh_uV867c"
-         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-         clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </li>
-    <li>
-
-        <p>Mi Canal Vlog </p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lCRte_wRHQI?si=w3CTM3JuJJruBd4X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </li>
-
-</ul>
+        <ul>
+            <li>
+                <p>Mi Canal para aprender guitarra</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/FxuhvnPXbGM?si=tVJtBVYKh_uV867c"
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+                </div>
+            </li>
+            <li>
+                <p>Mi Canal Vlog</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/lCRte_wRHQI?si=w3CTM3JuJJruBd4X" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+                </div>
+            </li>
+        </ul>
     </div>
-
 </section>
     <section id="download" class="descargar2 style="display: flex;"> 
         <h1>Descarga la DEMO!</h1>
@@ -211,17 +216,73 @@
             <p style="color: greenyellow;">Desarrollado por Marty Carps ©️ Todos los derechos reservados</p>
             <p style="color: rgb(92, 189, 96);">Versión 1.1</p>
         </div>
-        <div class="redes-so" style="display: flex; margin-top:-1.5%;">
-            <p style="color: greenyellow;">Sigueme en mis redes sociales</p>
-            <div class="sociales" style="margin-top: 10%; grid-column: auto; ">
-                <ul style="grid-column: inherit; list-style: disc; gap: 10%; translate: -37vh;">
-                <li style="hover:blue;">Facebook</li>
-                <li style="hover: rgb(253, 3, 78);">Instagram</li>
-                <li style="hover: red;">YouTube</li>
-                <li>Tiktok</li>
-                </ul>
-            </div>
-        </div>
+<div class="redes-so">
+    <p class="titulo">Sígueme en mis redes sociales</p>
+
+    <div class="sociales">
+        <ul>
+            <li>
+                <i class="fab fa-facebook"></i> Facebook
+            </li>
+            <li>
+                <i class="fab fa-instagram"></i> Instagram
+            </li>
+            <li>
+                <i class="fab fa-youtube"></i> YouTube
+            </li>
+            <li>
+                <i class="fab fa-tiktok"></i> TikTok
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.redes-so {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1.5%;
+}
+
+.titulo {
+    color: greenyellow;
+}
+
+.sociales ul {
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+.sociales li {
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover por red social */
+.sociales li:nth-child(1):hover {
+    color: #1877f2; /* Facebook */
+}
+
+.sociales li:nth-child(2):hover {
+    color: #e1306c; /* Instagram */
+}
+
+.sociales li:nth-child(3):hover {
+    color: #ff0000; /* YouTube */
+}
+
+.sociales li:nth-child(4):hover {
+    color:green; /* TikTok */
+}
+
+.sociales i {
+    margin-right: 10px;
+}
+</style>
     </footer>
 
 
