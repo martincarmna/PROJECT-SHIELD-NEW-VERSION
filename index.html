@@ -191,104 +191,114 @@
     </div>
 </div>
 
-    <footer style="display: flex; gap: 9%; align-items: center; ">
-          <div class="logo">
-            <img src="./img/akakka.png" alt="">
-            <!--<h2 style="color: greenyellow">PROJECT SHIELD</h2>-->
-        </div>
-        <!--<div style="display: flex;  translate: 50%;">
-            <ul style="gap: 20px;">
-                <li>
-                    <h4>Terminos</h4>
-                    <p style="width: 20px;">Lorem ipsum rggeeth</p>
-                </li>
-                <li>
-                    <h4>Comunidad</h4>
-                    <p style="width: 20px;">Lorem ipsum rggeeth</p>
-                </li>
-                <li>
-                    <h4>About</h4>
-                    <p style="width: 20px;">Lorem ipsum rggeeth</p>
-                </li>
-                <li>
-                    <h4>Privacidad</h4>
-                    <p style="width: 20px;">Lorem ipsum rggeeth</p>
-                </li>
-            </ul>
-
-        </div>-->
-        <div class="text-footer">
-            <p style="color: greenyellow;">Desarrollado por Marty Carps ©️ Todos los derechos reservados</p>
-            <p style="color: rgb(92, 189, 96);">Versión 1.1</p>
-        </div>
-<div class="redes-so">
-    <p class="titulo">Sígueme en mis redes sociales</p>
-
-    <div class="sociales">
-        <ul>
-            <li>
-                <i class="fab fa-facebook"></i> Facebook
-            </li>
-            <li>
-                <i class="fab fa-instagram"></i> Instagram
-            </li>
-            <li>
-                <i class="fab fa-youtube"></i> YouTube
-            </li>
-            <li>
-                <i class="fab fa-tiktok"></i> TikTok
-            </li>
-        </ul>
+<footer class="site-footer">
+    <!-- Sección de Logo -->
+    <div class="logo">
+        <img src="./img/akakka.png" alt="Logo">
+        <!--<h2 class="logo-titulo">PROJECT SHIELD</h2>-->
     </div>
-</div>
+
+    <!-- Sección de Texto / Copyright -->
+    <div class="text-footer">
+        <p class="copyright">Desarrollado por Marty Carps ©️ Todos los derechos reservados</p>
+        <p class="version">Versión 1.1</p>
+    </div>
+
+    <!-- Sección de Redes Sociales -->
+    <div class="redes-so">
+        <p class="titulo">Sígueme en mis redes sociales</p>
+        <div class="sociales">
+            <ul>
+                <li><i class="fab fa-facebook"></i> Facebook</li>
+                <li><i class="fab fa-instagram"></i> Instagram</li>
+                <li><i class="fab fa-youtube"></i> YouTube</li>
+                <li><i class="fab fa-tiktok"></i> TikTok</li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 <style>
+/* =========================================
+   ESTILOS BASE (Pantallas grandes / Desktop)
+   ========================================= */
+.site-footer {
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio de forma uniforme */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+    padding: 30px 20px;
+    background-color: #1a1a1a; /* Fondo oscuro opcional para resaltar tus colores vivos */
+}
+
+/* Textos centrales */
+.text-footer {
+    text-align: center;
+}
+
+.copyright {
+    color: greenyellow;
+    margin-bottom: 5px;
+}
+
+.version {
+    color: rgb(92, 189, 96);
+    margin-top: 0;
+}
+
+/* Sección de Redes Sociales */
 .redes-so {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -1.5%;
 }
 
 .titulo {
     color: greenyellow;
+    margin-bottom: 15px;
 }
 
 .sociales ul {
     list-style: none;
     padding: 0;
-    gap: 10px;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Muestra las redes en fila (horizontal) en escritorio */
 }
 
 .sociales li {
-    margin: 10px 0;
     font-size: 18px;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-/* Hover por red social */
-.sociales li:nth-child(1):hover {
-    color: #1877f2; /* Facebook */
-}
-
-.sociales li:nth-child(2):hover {
-    color: #e1306c; /* Instagram */
-}
-
-.sociales li:nth-child(3):hover {
-    color: #ff0000; /* YouTube */
-}
-
-.sociales li:nth-child(4):hover {
-    color:green; /* TikTok */
+    transition: color 0.3s ease;
+    color: #ffffff; /* Color base (blanco) para que se vea bien antes del hover */
 }
 
 .sociales i {
-    margin-right: 10px;
+    margin-right: 8px;
+}
+
+/* Hover por red social */
+.sociales li:nth-child(1):hover { color: #1877f2; } /* Facebook */
+.sociales li:nth-child(2):hover { color: #e1306c; } /* Instagram */
+.sociales li:nth-child(3):hover { color: #ff0000; } /* YouTube */
+.sociales li:nth-child(4):hover { color: #00f2fe; } /* TikTok (Ajustado para mejor contraste) */
+
+/* =========================================
+   MEDIA QUERIES (Pantallas móviles y tablets)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .site-footer {
+        flex-direction: column; /* Apila los 3 bloques principales verticalmente */
+        gap: 40px; /* Da un respiro entre el logo, el texto y las redes */
+    }
+
+    .sociales ul {
+        flex-direction: column; /* Apila las redes sociales en lista hacia abajo en celular */
+        align-items: center;
+        gap: 15px;
+    }
 }
 </style>
-    </footer>
 
 
 
