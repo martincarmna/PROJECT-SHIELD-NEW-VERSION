@@ -238,3 +238,70 @@
             gap: 20px;
             text-align: center;
         }
+        /* Contenedor principal */
+.herrero-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Puedes ajustar el tamaño aquí */
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden; /* Clave para que el overlay no se salga de los bordes */
+    box-shadow: 0 4px 15px rgba(173, 255, 47, 0.2); /* Sombra verde sutil para combinar con tu tema */
+    cursor: pointer;
+}
+
+/* La imagen de fondo */
+.herrero-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease; /* Transición suave para el zoom */
+}
+
+/* El fondo oscuro con el texto */
+.herrero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro al 80% de opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    /* Estado inicial: Invisible */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* El texto dentro del overlay */
+.herrero-overlay h2 {
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+    
+    /* Pequeño truco: el texto sube ligeramente al aparecer */
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+/* --- LOS EFECTOS AL PASAR EL MOUSE (HOVER) --- */
+
+/* 1. Muestra el overlay */
+.herrero-container:hover .herrero-overlay {
+    opacity: 1;
+}
+
+/* 2. El texto vuelve a su posición original */
+.herrero-container:hover .herrero-overlay h2 {
+    transform: translateY(0);
+}
+
+/* 3. La imagen hace un ligero zoom in */
+.herrero-container:hover img {
+    transform: scale(1.05);
+}

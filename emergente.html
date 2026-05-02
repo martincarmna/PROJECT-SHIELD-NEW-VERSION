@@ -1,15 +1,147 @@
-<html>
-    <body style="background-color: black;">
-        <div class="emergente" style="background-color: black; display: flex; color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; gap: 20px; box-shadow: 0 3px 40px greenyellow; ">
-            <img src="./img/filoo.png" alt="" width="30%">
-        <div class="mensaje" style="display: inline-block;">
-            <h1>Hola heroe un gusto conocerte soy Filo</h1>
-            <p>Por lo visto eres mas curioso de lo que pense en hora
-                buena esta habilidad te será util en esta aventura.
-            </p>
-            <p>SUERTE!</p>
-            <button><a href="./index.html">Regresar</a></button>
-        </div>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secreto</title>
+
+<style>
+body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* CONTENEDOR */
+.emergente {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px;
+    box-shadow: 0 0 40px greenyellow;
+    animation: aparecer 1s ease-in;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* IMAGEN */
+.filo {
+    width: 250px;
+    max-width: 100%;
+}
+
+/* TEXTO */
+.mensaje {
+    flex: 1;
+}
+
+.filo-nombre {
+    color: greenyellow;
+}
+
+.habilidad {
+    color: gold;
+    font-weight: bold;
+}
+
+/* BOTÓN */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: greenyellow;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* VIDEO */
+iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+}
+
+/* RESPONSIVE 🔥 */
+@media (max-width: 768px) {
+    .emergente {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .filo {
+        width: 180px;
+        margin: auto;
+    }
+
+    iframe {
+        height: 200px;
+    }
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="sonido" src="./audio/secreto.mp3"></audio>
+
+<div class="emergente">
+    <img src="./img/filoo.png" class="filo">
+
+    <div class="mensaje">
+        <h1>🗝️ Has descubierto un secreto...</h1>
+
+        <p>Hola héroe... soy <span class="filo-nombre">Filo</span>.</p>
+
+        <p>
+            No muchos llegan hasta aquí.  
+            Tu curiosidad será recompensada.
+        </p>
+
+        <p class="habilidad">
+            ⚡ Has desbloqueado una habilidad secreta
+        </p>
+
+        <a href="./index.html" class="btn">Regresar</a>
+
+        <p>Conoce más sobre el anime:</p>
+
+        <iframe src="https://www.youtube.com/embed/jZvFEtR8RH0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script>
+// Intentar reproducir automáticamente
+window.addEventListener("load", () => {
+    const audio = document.getElementById("sonido");
+
+    audio.volume = 0.5;
+
+    audio.play().catch(() => {
+        console.log("Autoplay bloqueado");
+
+        // Si falla, activar con primer click
+        document.body.addEventListener("click", () => {
+            audio.play();
+        }, { once: true });
+    });
+});
+</script>
+
+</body>
 </html>
